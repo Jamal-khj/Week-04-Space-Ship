@@ -28,57 +28,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""id"": ""14573f51-4baf-4411-8369-e7f663b86547"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
-                    ""type"": ""Button"",
-                    ""id"": ""b8294ed4-0332-431b-b0d5-8c1919e790a7"",
+                    ""name"": ""Movement1"",
+                    ""type"": ""Value"",
+                    ""id"": ""47f5ff2d-1d87-4ae5-97fa-3698444e04d1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""614d9f32-b212-4749-b8bf-ba33496f57a3"",
-                    ""path"": ""<DualShockGamepad>/leftStick/down"",
+                    ""id"": ""e1b3fd4e-8c10-44ca-a631-918ece7d5844"",
+                    ""path"": ""<DualShockGamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e46aaffa-8d25-4000-a77d-074901b0be72"",
-                    ""path"": ""<DualShockGamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5e351a3c-564e-4bad-8301-617e3d158060"",
-                    ""path"": ""<DualShockGamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""19c1480b-7eed-47da-9c39-a6bdfc8f2b2e"",
-                    ""path"": ""<DualShockGamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Movement1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -89,7 +56,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
 }");
         // GamePlay
         m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
-        m_GamePlay_Movement = m_GamePlay.FindAction("Movement", throwIfNotFound: true);
+        m_GamePlay_Movement1 = m_GamePlay.FindAction("Movement1", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -151,12 +118,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // GamePlay
     private readonly InputActionMap m_GamePlay;
     private List<IGamePlayActions> m_GamePlayActionsCallbackInterfaces = new List<IGamePlayActions>();
-    private readonly InputAction m_GamePlay_Movement;
+    private readonly InputAction m_GamePlay_Movement1;
     public struct GamePlayActions
     {
         private @PlayerControls m_Wrapper;
         public GamePlayActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_GamePlay_Movement;
+        public InputAction @Movement1 => m_Wrapper.m_GamePlay_Movement1;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -166,16 +133,16 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_GamePlayActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_GamePlayActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
+            @Movement1.started += instance.OnMovement1;
+            @Movement1.performed += instance.OnMovement1;
+            @Movement1.canceled += instance.OnMovement1;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
+            @Movement1.started -= instance.OnMovement1;
+            @Movement1.performed -= instance.OnMovement1;
+            @Movement1.canceled -= instance.OnMovement1;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -195,6 +162,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public GamePlayActions @GamePlay => new GamePlayActions(this);
     public interface IGamePlayActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnMovement1(InputAction.CallbackContext context);
     }
 }
