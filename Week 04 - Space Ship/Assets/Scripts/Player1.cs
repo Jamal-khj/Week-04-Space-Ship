@@ -5,18 +5,18 @@ using UnityEngine.InputSystem;
 
 public class Player1 : MonoBehaviour
 {
-    PlayerControls controls;
+    PlayerControls controls1;
     Vector2 moveDirection;
     [SerializeField] private float speed;
     Rigidbody rb;
 
     private void Awake()
     {
-        controls = new PlayerControls();
+        controls1 = new PlayerControls();
         rb = GetComponent<Rigidbody>();
 
-        controls.GamePlay.Movement1.performed += ctx => moveDirection = ctx.ReadValue<Vector2>();
-        controls.GamePlay.Movement1.canceled += ctx => moveDirection = Vector2.zero;
+        controls1.GamePlay.Movement1.performed += ctx => moveDirection = ctx.ReadValue<Vector2>();
+        controls1.GamePlay.Movement1.canceled += ctx => moveDirection = Vector2.zero;
     }
 
     private void Update()
@@ -27,11 +27,11 @@ public class Player1 : MonoBehaviour
 
     private void OnEnable()
     {
-        controls.GamePlay.Enable();
+        controls1.GamePlay.Enable();
     }
 
     private void OnDisable()
     {
-        controls.GamePlay.Disable();
+        controls1.GamePlay.Disable();
     }
 }
