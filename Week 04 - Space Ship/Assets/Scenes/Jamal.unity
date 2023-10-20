@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 77629138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 77629137}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.913, z: 0}
+  m_LocalPosition: {x: 0, y: 0.982, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339716726}
   - component: {fileID: 339716725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: North Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,6 +207,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &399986183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 399986185}
+  - component: {fileID: 399986184}
+  m_Layer: 0
+  m_Name: Projectile Destoryer
+  m_TagString: Destory Bullet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &399986184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399986183}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 52.842705, y: 15.239308, z: 19.261246}
+  m_Center: {x: 0.116241455, y: -7.119654, z: 2.582707}
+--- !u!4 &399986185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399986183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 42.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &422711979
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +272,7 @@ GameObject:
   - component: {fileID: 422711983}
   - component: {fileID: 422711982}
   - component: {fileID: 422711981}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +485,7 @@ GameObject:
   - component: {fileID: 847328202}
   - component: {fileID: 847328203}
   - component: {fileID: 847328204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,6 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 77629138}
   projectilePrefab: {fileID: 6215576715570780516, guid: f00d982ea0ee0f84db166f2756bb554e, type: 3}
+  projecticleForce: 20
 --- !u!1 &883172165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,3 +1209,4 @@ SceneRoots:
   - {fileID: 1164019040}
   - {fileID: 1185653948}
   - {fileID: 339716726}
+  - {fileID: 399986185}

@@ -31,6 +31,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": ""Movement1"",
                     ""type"": ""Value"",
                     ""id"": ""47f5ff2d-1d87-4ae5-97fa-3698444e04d1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Shooting"",
+                    ""type"": ""Button"",
+                    ""id"": ""193c6a5f-6db0-49a7-9ee0-fff605d83bbb"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -48,6 +57,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Movement1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17aa9cd6-bd8f-4935-9b26-38baaa78caa9"",
+                    ""path"": ""<DualShockGamepad>/dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""94a8a642-cc48-450c-bc44-c7c910b4dc66"",
+                    ""path"": ""<DualShockGamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +88,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // GamePlay
         m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
         m_GamePlay_Movement1 = m_GamePlay.FindAction("Movement1", throwIfNotFound: true);
+        m_GamePlay_Shooting = m_GamePlay.FindAction("Shooting", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -119,11 +151,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GamePlay;
     private List<IGamePlayActions> m_GamePlayActionsCallbackInterfaces = new List<IGamePlayActions>();
     private readonly InputAction m_GamePlay_Movement1;
+    private readonly InputAction m_GamePlay_Shooting;
     public struct GamePlayActions
     {
         private @PlayerControls m_Wrapper;
         public GamePlayActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement1 => m_Wrapper.m_GamePlay_Movement1;
+        public InputAction @Shooting => m_Wrapper.m_GamePlay_Shooting;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -136,6 +170,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Movement1.started += instance.OnMovement1;
             @Movement1.performed += instance.OnMovement1;
             @Movement1.canceled += instance.OnMovement1;
+            @Shooting.started += instance.OnShooting;
+            @Shooting.performed += instance.OnShooting;
+            @Shooting.canceled += instance.OnShooting;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -143,6 +180,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Movement1.started -= instance.OnMovement1;
             @Movement1.performed -= instance.OnMovement1;
             @Movement1.canceled -= instance.OnMovement1;
+            @Shooting.started -= instance.OnShooting;
+            @Shooting.performed -= instance.OnShooting;
+            @Shooting.canceled -= instance.OnShooting;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -163,5 +203,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IGamePlayActions
     {
         void OnMovement1(InputAction.CallbackContext context);
+        void OnShooting(InputAction.CallbackContext context);
     }
 }

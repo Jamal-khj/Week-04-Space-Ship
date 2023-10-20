@@ -9,6 +9,15 @@
                     "name": "Movement1",
                     "type": "Value",
                     "id": "47f5ff2d-1d87-4ae5-97fa-3698444e04d1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Shooting",
+                    "type": "Button",
+                    "id": "193c6a5f-6db0-49a7-9ee0-fff605d83bbb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -24,6 +33,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Movement1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17aa9cd6-bd8f-4935-9b26-38baaa78caa9",
+                    "path": "<DualShockGamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94a8a642-cc48-450c-bc44-c7c910b4dc66",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shooting",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7956325425065141806}
   - component: {fileID: 398077985029753282}
   - component: {fileID: 4653398482089718953}
-  m_Layer: 0
+  - component: {fileID: 4189970691729866180}
+  m_Layer: 6
   m_Name: Projectiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6215576715570780516}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.55, z: 0}
+  m_LocalPosition: {x: 0, y: -8.55, z: -0.5}
   m_LocalScale: {x: 0.44315, y: 0.44315, z: 0.44315}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,7 +101,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -131,5 +132,17 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4189970691729866180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215576715570780516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52190cdbe739e7141b5bec056860861b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
