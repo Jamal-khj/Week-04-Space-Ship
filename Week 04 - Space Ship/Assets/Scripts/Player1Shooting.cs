@@ -18,7 +18,7 @@ public class Player1Shooting : MonoBehaviour
 
     private void Update()
     {
-        controls1.GamePlay.Shooting.performed += cxt => shooting();
+        controls1.GamePlay.Shooting1.performed += cxt => shooting();
     }
 
     void shooting()

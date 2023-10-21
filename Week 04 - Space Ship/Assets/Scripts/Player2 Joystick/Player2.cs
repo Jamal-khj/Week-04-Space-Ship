@@ -15,8 +15,8 @@ public class Player2 : MonoBehaviour
         controls2 = new PlayerControls();
         rb = GetComponent<Rigidbody>();
 
-        controls2.GamePlay.Movement1.performed += ctx => moveDirection = ctx.ReadValue<Vector2>();
-        controls2.GamePlay.Movement1.canceled += ctx => moveDirection = Vector2.zero;
+        controls2.GamePlay.Movement2.performed += ctx => moveDirection = ctx.ReadValue<Vector2>();
+        controls2.GamePlay.Movement2.canceled += ctx => moveDirection = Vector2.zero;
     }
 
     private void Update()

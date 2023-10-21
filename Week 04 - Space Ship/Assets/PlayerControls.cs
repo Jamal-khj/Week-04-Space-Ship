@@ -37,10 +37,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Shooting"",
+                    ""name"": ""Shooting1"",
                     ""type"": ""Button"",
                     ""id"": ""193c6a5f-6db0-49a7-9ee0-fff605d83bbb"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Movement2"",
+                    ""type"": ""Value"",
+                    ""id"": ""50096601-bb0f-471f-a09a-d47cbb27c542"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Shooting2"",
+                    ""type"": ""Value"",
+                    ""id"": ""895fe42b-1650-4493-82de-893221113699"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -76,7 +94,62 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Shooting"",
+                    ""action"": ""Shooting1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ccf378ba-2d0b-4300-9aac-9267ddafdac4"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba1032dd-8b54-4753-b570-d66d0dcd4a6d"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b03a03b-11bc-4d49-ba0f-3f5405d1d32a"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ae2dad2a-e78c-4446-aa07-fed793ba89ba"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c40ac0f8-ec8a-4814-91d3-d00286b025a9"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -88,7 +161,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // GamePlay
         m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
         m_GamePlay_Movement1 = m_GamePlay.FindAction("Movement1", throwIfNotFound: true);
-        m_GamePlay_Shooting = m_GamePlay.FindAction("Shooting", throwIfNotFound: true);
+        m_GamePlay_Shooting1 = m_GamePlay.FindAction("Shooting1", throwIfNotFound: true);
+        m_GamePlay_Movement2 = m_GamePlay.FindAction("Movement2", throwIfNotFound: true);
+        m_GamePlay_Shooting2 = m_GamePlay.FindAction("Shooting2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -151,13 +226,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GamePlay;
     private List<IGamePlayActions> m_GamePlayActionsCallbackInterfaces = new List<IGamePlayActions>();
     private readonly InputAction m_GamePlay_Movement1;
-    private readonly InputAction m_GamePlay_Shooting;
+    private readonly InputAction m_GamePlay_Shooting1;
+    private readonly InputAction m_GamePlay_Movement2;
+    private readonly InputAction m_GamePlay_Shooting2;
     public struct GamePlayActions
     {
         private @PlayerControls m_Wrapper;
         public GamePlayActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement1 => m_Wrapper.m_GamePlay_Movement1;
-        public InputAction @Shooting => m_Wrapper.m_GamePlay_Shooting;
+        public InputAction @Shooting1 => m_Wrapper.m_GamePlay_Shooting1;
+        public InputAction @Movement2 => m_Wrapper.m_GamePlay_Movement2;
+        public InputAction @Shooting2 => m_Wrapper.m_GamePlay_Shooting2;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -170,9 +249,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Movement1.started += instance.OnMovement1;
             @Movement1.performed += instance.OnMovement1;
             @Movement1.canceled += instance.OnMovement1;
-            @Shooting.started += instance.OnShooting;
-            @Shooting.performed += instance.OnShooting;
-            @Shooting.canceled += instance.OnShooting;
+            @Shooting1.started += instance.OnShooting1;
+            @Shooting1.performed += instance.OnShooting1;
+            @Shooting1.canceled += instance.OnShooting1;
+            @Movement2.started += instance.OnMovement2;
+            @Movement2.performed += instance.OnMovement2;
+            @Movement2.canceled += instance.OnMovement2;
+            @Shooting2.started += instance.OnShooting2;
+            @Shooting2.performed += instance.OnShooting2;
+            @Shooting2.canceled += instance.OnShooting2;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -180,9 +265,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Movement1.started -= instance.OnMovement1;
             @Movement1.performed -= instance.OnMovement1;
             @Movement1.canceled -= instance.OnMovement1;
-            @Shooting.started -= instance.OnShooting;
-            @Shooting.performed -= instance.OnShooting;
-            @Shooting.canceled -= instance.OnShooting;
+            @Shooting1.started -= instance.OnShooting1;
+            @Shooting1.performed -= instance.OnShooting1;
+            @Shooting1.canceled -= instance.OnShooting1;
+            @Movement2.started -= instance.OnMovement2;
+            @Movement2.performed -= instance.OnMovement2;
+            @Movement2.canceled -= instance.OnMovement2;
+            @Shooting2.started -= instance.OnShooting2;
+            @Shooting2.performed -= instance.OnShooting2;
+            @Shooting2.canceled -= instance.OnShooting2;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -203,6 +294,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IGamePlayActions
     {
         void OnMovement1(InputAction.CallbackContext context);
-        void OnShooting(InputAction.CallbackContext context);
+        void OnShooting1(InputAction.CallbackContext context);
+        void OnMovement2(InputAction.CallbackContext context);
+        void OnShooting2(InputAction.CallbackContext context);
     }
 }
