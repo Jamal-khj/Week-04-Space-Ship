@@ -11,6 +11,8 @@ public class Player1Shooting : MonoBehaviour
     PlayerControls controls1;
     [SerializeField] private float projecticleForce;
 
+    [SerializeField] private AudioSource shootingSoundEffect;
+
     private void Awake()
     {
         controls1 = new PlayerControls();
@@ -26,6 +28,7 @@ public class Player1Shooting : MonoBehaviour
         GameObject bullet = Instantiate(projectilePrefab, shootingPoint.position, shootingPoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.AddForce(shootingPoint.up * projecticleForce, ForceMode.Impulse);
+        shootingSoundEffect.Play();
     }
 
     private void OnEnable()
