@@ -9,7 +9,7 @@ public class Player1Shooting : MonoBehaviour
     [SerializeField] private Transform shootingPoint;
     [SerializeField] private GameObject projectilePrefab;
     PlayerControls controls1;
-    [SerializeField] private float projecticleForce = 20.0f;
+    [SerializeField] private float projecticleForce;
 
     private void Awake()
     {
@@ -24,6 +24,8 @@ public class Player1Shooting : MonoBehaviour
     void shooting()
     {
         GameObject bullet = Instantiate(projectilePrefab, shootingPoint.position, shootingPoint.rotation);
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        rb.AddForce(shootingPoint.up * projecticleForce, ForceMode.Impulse);
     }
 
     private void OnEnable()
