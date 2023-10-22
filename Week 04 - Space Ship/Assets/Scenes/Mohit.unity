@@ -670,6 +670,7 @@ MonoBehaviour:
   shootingPoint: {fileID: 1649058306}
   projectilePrefab: {fileID: 6215576715570780516, guid: f00d982ea0ee0f84db166f2756bb554e, type: 3}
   projecticleForce: 20
+  shootingSoundEffect: {fileID: 0}
 --- !u!54 &1290200436
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -888,6 +889,7 @@ MonoBehaviour:
   shootingPoint: {fileID: 407889766}
   projectilePrefab: {fileID: 6215576715570780516, guid: f00d982ea0ee0f84db166f2756bb554e, type: 3}
   projectileForce: 20
+  shootingSoundEffect: {fileID: 0}
 --- !u!114 &1497806419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,10 +1426,10 @@ SceneRoots:
   - {fileID: 242132908}
   - {fileID: 1425620771}
   - {fileID: 1670697980}
+  - {fileID: 1000908921}
   - {fileID: 404912381}
   - {fileID: 1290200441}
-  - {fileID: 1000908921}
+  - {fileID: 1497806424}
   - {fileID: 1555765322}
   - {fileID: 807654437}
-  - {fileID: 1497806424}
   - {fileID: 157636625}
