@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 07fea4a218434844d9a4918bd6405058
   - enabled: 1
-    path: Assets/Scenes/Jamal.unity
+    path: Assets/Scenes/Main Game.unity
     guid: ba258e67290bb11408c71292f56d63c0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8cd23d434f116c8428781590e1275ce1, type: 2}
