@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1192202573501849228}
   - component: {fileID: 764129778804326734}
-  - component: {fileID: 9121488700755885457}
   - component: {fileID: 8775417522389214331}
   - component: {fileID: 7533464406557940089}
+  - component: {fileID: 6136693452759479712}
   m_Layer: 8
   m_Name: laserRed01
   m_TagString: Enemy Bullet
@@ -87,27 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!135 &9121488700755885457
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3091073837747476111}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8775417522389214331
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,3 +126,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52190cdbe739e7141b5bec056860861b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &6136693452759479712
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091073837747476111}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.06655665
+  m_Height: 0.54
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.033443335}

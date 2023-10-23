@@ -426,7 +426,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76807462}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7df04b7b240aae244821094d9d1edd6a, type: 3}
   m_Name: 
@@ -434,6 +434,9 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   player: {fileID: 76807462}
+  player1Dead: 0
+  player2Dead: 0
+  id: 2
 --- !u!1 &77629137
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,8 +781,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 52.842705, y: 15.239308, z: 19.261246}
-  m_Center: {x: 0.116241455, y: -7.119654, z: 2.582707}
+  m_Size: {x: 52.842705, y: 6.8919277, z: 19.261246}
+  m_Center: {x: 0.116241455, y: -2.9459639, z: 2.5827065}
 --- !u!4 &339716726
 Transform:
   m_ObjectHideFlags: 0
@@ -1074,7 +1077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &493226024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb110657cfe21a46999f8aca17a8fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 5
+  startTime: 120
   currentTime: 0
   winPanel: {fileID: 865896224}
 --- !u!4 &493226025
@@ -1464,7 +1467,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847328195}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7df04b7b240aae244821094d9d1edd6a, type: 3}
   m_Name: 
@@ -1472,6 +1475,9 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   player: {fileID: 847328195}
+  player1Dead: 0
+  player2Dead: 0
+  id: 1
 --- !u!1 &865896224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3767972055941530390, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
@@ -1979,6 +1985,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 865896224}
     - target: {fileID: 4610341138578234332, guid: 9989a920a68c8614fa9b0106bc6dbe3e, type: 3}
+      propertyPath: player1Health
+      value: 
+      objectReference: {fileID: 847328206}
+    - target: {fileID: 4610341138578234332, guid: 9989a920a68c8614fa9b0106bc6dbe3e, type: 3}
+      propertyPath: player2Health
+      value: 
+      objectReference: {fileID: 76807473}
+    - target: {fileID: 4610341138578234332, guid: 9989a920a68c8614fa9b0106bc6dbe3e, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1121311929}
@@ -2080,8 +2094,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3285315276318048158, guid: 4426b47ecc0d78f4881e2cc00669fcc8, type: 3}
+      propertyPath: youWinScreen
+      value: 
+      objectReference: {fileID: 865896224}
+    - target: {fileID: 3285315276318048158, guid: 4426b47ecc0d78f4881e2cc00669fcc8, type: 3}
       propertyPath: waveConfigs.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3285315276318048158, guid: 4426b47ecc0d78f4881e2cc00669fcc8, type: 3}
       propertyPath: waveConfigs.Array.data[12]
@@ -2090,7 +2108,7 @@ PrefabInstance:
     - target: {fileID: 3285315276318048158, guid: 4426b47ecc0d78f4881e2cc00669fcc8, type: 3}
       propertyPath: waveConfigs.Array.data[13]
       value: 
-      objectReference: {fileID: 11400000, guid: d9d2367a4916baf45bdd555faee9c848, type: 2}
+      objectReference: {fileID: 11400000, guid: e12d41e770b64224f992418d887a4244, type: 2}
     - target: {fileID: 8394189011864493471, guid: 4426b47ecc0d78f4881e2cc00669fcc8, type: 3}
       propertyPath: m_Name
       value: EnemySpawner

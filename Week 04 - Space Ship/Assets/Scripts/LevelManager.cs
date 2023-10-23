@@ -10,6 +10,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject youWinScreen;
     private bool isPaused = false;
 
+    public PlayerHealth player1Health;
+    public PlayerHealth player2Health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         PauseScreen();
+        GameOverScreen();
     }
 
     public void PauseScreen()
@@ -55,13 +59,17 @@ public class LevelManager : MonoBehaviour
 
     public void GameOverScreen()
     {
-        Time.timeScale = 0;
-        gameOverScreen.SetActive(true);
+        if (player1Health.player1Dead == true && player2Health.player2Dead == true)
+        {
+            //Debug.Log("they dead");
+            Time.timeScale = 0;
+            gameOverScreen.SetActive(true);
+        }
     }
     public void StartGame()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Jamal");
+        SceneManager.LoadScene("Main Game");
     }
 
     public void QuitGame()

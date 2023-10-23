@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] List<WaveConfigSO> waveConfigs;
     [SerializeField] float timeBetweenWaves = 0f;
     [SerializeField] WaveConfigSO currentWave;
+    [SerializeField] private GameObject youWinScreen;
     void Start()
     {
         StartCoroutine(SpawnEnemyWaves());
@@ -29,7 +30,8 @@ public class EnemySpawner : MonoBehaviour
             }
             yield return new WaitForSeconds(timeBetweenWaves);
         }
-        
-       
+
+        Time.timeScale = 0;
+        youWinScreen.SetActive(true);
     }
 }

@@ -9,6 +9,10 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int currentHealth;
 
     [SerializeField] private GameObject player;
+    public bool player1Dead = false;
+    public bool player2Dead = false;
+
+    public int id;
     
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,19 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0.0f)
         {
-            player.SetActive(false);
+            if(id == 1)
+            {
+                player1Dead = true;
+                //Debug.Log("player 1 dead");
+                player.SetActive(false);
+                
+            }
+            else if (id == 2)
+            {
+                player2Dead = true;
+                //Debug.Log("player 2 dead");
+                player.SetActive(false);
+            }
         }
     }
     
