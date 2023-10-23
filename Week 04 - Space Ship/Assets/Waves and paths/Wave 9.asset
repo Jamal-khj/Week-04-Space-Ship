@@ -63,8 +63,33 @@ MonoBehaviour:
   - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
   - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
   - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
+  - {fileID: 306896754690206714, guid: 0dac4cf9612ba8e4f982e8ac6a3847af, type: 3}
   pathPrefab: {fileID: 3278795835090589178, guid: c5b6437031225a742b4ad7aecc79c490, type: 3}
-  moveSpeed: 20
-  timeBetweenEnemySpawns: 0.3
+  moveSpeed: 27
+  timeBetweenEnemySpawns: 0.2
   spawnTimeVariance: 0.2
   minimumSpawnTime: 0.1
