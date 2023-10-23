@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject youWinScreen;
+    [SerializeField] private GameObject controlsScreen;
     private bool isPaused = false;
 
     public PlayerHealth player1Health;
@@ -57,6 +58,12 @@ public class LevelManager : MonoBehaviour
         youWinScreen.SetActive(true);
     }
 
+    public void ControlsScreen()
+    {
+        Time.timeScale = 0;
+        controlsScreen.SetActive(true);
+    }
+
     public void GameOverScreen()
     {
         if (player1Health.player1Dead == true && player2Health.player2Dead == true)
@@ -68,7 +75,7 @@ public class LevelManager : MonoBehaviour
     }
     public void StartGame()
     {
-        Time.timeScale = 1.0f;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Main Game");
     }
 
@@ -85,6 +92,7 @@ public class LevelManager : MonoBehaviour
     }
     public void MainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 }

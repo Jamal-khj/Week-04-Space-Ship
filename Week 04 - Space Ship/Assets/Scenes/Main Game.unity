@@ -482,10 +482,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 695068411511731176, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 695068411511731176, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 25cde607599fd9b4b8d4d1a9e0dd84b9, type: 3}
     - target: {fileID: 1763819095603284382, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 197427691}
+    - target: {fileID: 3072506403147300135, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072506403147300135, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6cbcc5d205b9eb04882fa10a8499e490, type: 3}
+    - target: {fileID: 3711195211857602947, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711195211857602947, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 25cde607599fd9b4b8d4d1a9e0dd84b9, type: 3}
     - target: {fileID: 3767972055941530390, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -505,6 +529,18 @@ PrefabInstance:
     - target: {fileID: 7085738993930049926, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085738994107027729, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.41451588
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085738994107027729, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.72278684
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085738994107027729, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
       objectReference: {fileID: 0}
     - target: {fileID: 7085738994371075207, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
       propertyPath: m_Name
@@ -590,10 +626,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7085738994464158024, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085738994464158024, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39debbd081f7e6a47853ce3d51123907, type: 3}
     - target: {fileID: 7085738994464158025, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 197427691}
+    - target: {fileID: 7085738994464158027, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085738994687637892, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085738994687637892, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39debbd081f7e6a47853ce3d51123907, type: 3}
     - target: {fileID: 7085738994687637893, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -602,6 +658,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8995424451393139080, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995424451393139080, guid: e5cf773742fe2604abb569f67363d4aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6cbcc5d205b9eb04882fa10a8499e490, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
